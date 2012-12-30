@@ -474,7 +474,7 @@ a.Small img {
 
 /* =================================================================== Header */
 #Head {
-   background: #000 url('http://upinthesky.net/woGue/data/noise-texture.png');
+   background: #000 url('images/noise-texture.png');
    padding: 0;
    height:48px;
 }
@@ -639,7 +639,7 @@ body #Head h1 {
    -webkit-border-radius: 2px;
    border-radius: 2px;
    user-select: none;
-   background: url('http://upinthesky.net/woGue/data/emblem-system-symbolic.svg') center center no-repeat;
+   background: url('images/emblem-system-symbolic.png') center center no-repeat;
    padding-right: 18px;
    -webkit-user-select: none;
    -moz-user-select: none;
@@ -1053,7 +1053,7 @@ margin:0;
    color: rgba(0,0,0,0.0);
    display: block;
    margin:0;
-   background: url('http://upinthesky.net/woGue/data/edit-delete-symbolic.svg') center center no-repeat;
+   background: url('images/edit-delete-symbolic.png') center center no-repeat;
    padding:2px 4px;
    width:20px;
    height:20px;
