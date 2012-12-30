@@ -44,8 +44,6 @@ body {
    line-height: 1;
    color: black;
    background: white;
-  
-   	
 }
 ol, ul {
    list-style: none;
@@ -70,14 +68,16 @@ blockquote, q {
 /* ============================================== General Styles & Typography */
 body {
    color: #000;
-	font-family: 'lucida grande','Lucida Sans Unicode', tahoma, sans-serif;
-	font-size: 75%;
-	line-height: 1.7em;
-   background: url(images/html-bg.png) top left repeat-x;
+   font-family:'Cantarell', 'lucida grande','Lucida Sans Unicode', tahoma, sans-serif;
+   font-size: 75%;
+   line-height: 1.7em;
+   background: #ffffff url('http://upinthesky.net/woGue/data/noise-texture.png');
    margin: 0;
    padding: 0;
    text-align: center;
-   font-size: small;
+   font-size: 0.9em;
+   font-weight:400;
+   /*text-shadow: 0px 1px 0px rgba(255,255,255,0.8);*/
 }
 #Body {
    width: 960px;
@@ -103,7 +103,7 @@ body {
 }
 h1, h2, h3, h4, h5, h6 {
    color: #000;
-   font-family: "Helvetica Neue",Helvetica,arial,sans-serif;
+   font-family:'Cantarell', "Helvetica Neue",Helvetica,arial,sans-serif;
    font-weight: normal;
    margin: 0;
 }
@@ -138,11 +138,11 @@ h5 {
 }
 a {
    text-decoration: none;
-   color: #1e79a7;
+   color: #5C6F7E;
 }
 a:hover {
    text-decoration: none;
-   color: #ff0084;
+   color: #AFB4B8;
 }
 img.Thumbnail {
 	max-height: 300px;
@@ -153,18 +153,31 @@ img.Thumbnail {
 input.DateBox,
 input.InputBox,
 input.SmallInput,
+ul.token-input-list,
 textarea {
-   font-family: 'lucida grande','Lucida Sans Unicode', tahoma, sans-serif;
-   color: #333;
-   font-size: 15px;
+   font-family: 'Cantarell', 'lucida grande','Lucida Sans Unicode', tahoma, sans-serif;
+   color: rgba(0,0,0,0.8);
+   font-size: 16px;
    padding: 3px;
    margin: 0;
-   width: 250px;
-   border: 1px solid #aaa;
-   border-radius: 2px;
-	-moz-border-radius: 2px;
-	-webkit-border-radius: 2px;
+   width: auto;
+   border: 2px solid rgba(0,0,0,0.4);
+   border-radius: 5px;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   -webkit-transition: all 0.4s ease-in-out;
+   -moz-transition: all 0.4s ease-in-out;
+   -o-transition: all 0.4s ease-in-out;
+   -ms-transition: all 0.4s ease-in-out;
+   transition: all 0.4s ease-in-out;
+
 }
+
+input.DateBox:hover,input.InputBox:hover,input.SmallInput:hover,input.DateBox:focus,input.InputBox:focus,input.SmallInput:focus, ul.token-input-list:hover {
+   border: 2px solid rgba(74,144,214,0.9);
+   box-shadow:0px 0px 24px rgba(74,144,214,0.9); 
+}
+
 .TextBoxWrapper {
 	width: auto;
 	padding-right: 8px;
@@ -198,45 +211,64 @@ select {
    color: #222;
    margin: 0;
    padding: 3px;
+   border-radius:4px;
    }
+
 a.Button,
 .Button {
    cursor: pointer;
    margin: 0;
-   font-size: 11px;
-   padding: 4px;
-	background: #f8f8f8;
-	background:-webkit-gradient(linear, center bottom, center top, from(#cccccc), to(#ffffff));
-	background:-moz-linear-gradient(top, #ffffff, #cccccc);
-	-pie-background:linear-gradient(top, #ffffff, #cccccc);
-	background:linear-gradient(top, #ffffff, #cccccc);
-   color: #02475A;
-	text-shadow: 0 1px 0 #fff;
-   border: 1px solid #999;
-   border-radius: 3px;
-   -moz-border-radius: 3px;
-   -webkit-border-radius: 3px;
-	box-shadow: 0px 0px 2px #999;
-	-moz-box-shadow: 0px 0px 2px #999;
-	-webkit-box-shadow: 0px 0px 2px #999;
-	white-space: nowrap;
+   font-size: 10px;
+   padding: 6px 10px;
+   background: #f8f8f8;
+   background:-webkit-gradient(linear, center bottom, center top, from(rgba(0,0,0,1.0)), to(rgba(46,52,54,1.0)));
+   background:-moz-linear-gradient(bottom, rgba(0,0,0,1.0), rgba(46,52,54,1.0));
+   -pie-background:linear-gradient(bottom, rgba(0,0,0,1.0), rgba(46,52,54,1.0));
+   background:linear-gradient(bottom, rgba(0,0,0,1.0), rgba(46,52,54,1.0));
+   color: #ffffff;
+   text-shadow: 0 1px 0 #000;
+   border: 2px solid #8c8c8c;
+   border-radius: 17px;
+   -moz-border-radius: 17px;
+   -webkit-border-radius: 17px;
+   white-space: nowrap;
+   -webkit-transition: all 0.4s ease-in-out;
+   -moz-transition: all 0.4s ease-in-out;
+   -o-transition: all 0.4s ease-in-out;
+   -ms-transition: all 0.4s ease-in-out;
+   transition: all 0.4s ease-in-out;
+
 }
 a.Button {
    display: inline-block;
-   padding: 4px;
+   padding: 6px 10px;
    line-height: 100%;
    margin: 3px auto;
+   -webkit-transition: all 0.4s ease-in-out;
+   -moz-transition: all 0.4s ease-in-out;
+   -o-transition: all 0.4s ease-in-out;
+   -ms-transition: all 0.4s ease-in-out;
+   transition: all 0.4s ease-in-out;
+
 }
 input.Button {
-	font-size: 14px;
+   font-size: 14px;
    font-weight: bold;
+   -webkit-transition: all 0.4s ease-in-out;
+   -moz-transition: all 0.4s ease-in-out;
+   -o-transition: all 0.4s ease-in-out;
+   -ms-transition: all 0.4s ease-in-out;
+   transition: all 0.4s ease-in-out;
+
 }
-.Button:hover {
-   color: #111;
-   border: 1px solid #666;
-}
-.Button:focus {
-   background: #eee;
+.Button:hover, .Button:focus {
+   color: #ffffff;
+   border: 2px solid #8c8c8c;
+   background: #f8f8f8;
+   background:-webkit-gradient(linear, center bottom, center top, from(rgba(0,0,0,1.0)), to(rgba(136,138,133,1.0)));
+   background:-moz-linear-gradient(bottom, rgba(0,0,0,1.0), rgba(136,138,133,1.0));
+   -pie-background:linear-gradient(bottom, rgba(0,0,0,1.0), rgba(136,138,133,1.0));
+   background:linear-gradient(bottom, rgba(0,0,0,1.0), rgba(136,138,133,1.0));
 }
 .Buttons {
    margin-top: 10px;
@@ -442,8 +474,9 @@ a.Small img {
 
 /* =================================================================== Header */
 #Head {
-   /*background: #38abe3;*/   
+   background: #000 url('http://upinthesky.net/woGue/data/noise-texture.png');
    padding: 0;
+   height:48px;
 }
 .Search:after,
 div#Search:after {
@@ -454,12 +487,12 @@ div#Search:after {
    visibility: hidden;
 }
 body #Head h1 {
-   display: inline-block;
+   display: none;
    font-weight: bold;
    margin: 0;
    padding: 21px 10px 4px 0;
    border: 0;
-}
+} 
 #Head h1 a span {
    font-size: 24px;
    color:#fff;
@@ -468,110 +501,64 @@ body #Head h1 {
 #Head #Search {
    position: absolute;
    right: 0;
-   bottom: 6px;
+   top: 4px;
    text-align: right;
-   
-}
+   margin:8px;
 
+}
 #Head form {
    float: right;
    width: 250px;
    padding: 0;
-   border-left:1px #888 solid;	
 }
 #Head form input.InputBox {
    width: 204px;
-   border: 0;
-   
-	padding: 4px 4px 4px 28px;
-	margin: 0 6px 0 0;
-    background: url(images/search-icon.png) transparent 10px 5px no-repeat;
-   -moz-border-radius: 2px;
-   -webkit-border: 2px;
-   border-bottom: 2px;
-   color: #969696;
+   border: 2px solid rgba(136,138,133,0.5);
+   padding: 4px 6px;
+   margin: 0 6px 0 0;
+   background: rgba(240,240,240,0.1);
+   -moz-border-radius: 17px;
+   -webkit-border-radius: 17px;
+   border-radius:17px;
+   color: rgba(0,0,0,0.8);
    font-size: 13px;
-	vertical-align: bottom;
+   font-weight:bold;
+   vertical-align: center;
+   box-shadow:inset 0px 2px 6px rgba(0,0,0,0.6), 0px 2px 6px rgba(255,255,255,0.3);
+     -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: background box-shadow 0.4s ease-in-out;
+    -o-transition: background box-shadow 0.4s ease-in-out;
+    -ms-transition: background box-shadow 0.4s ease-in-out;
+    transition: background box-shadow 0.4s ease-in-out;
+}
+
+#Head form input.InputBox:hover{
+   background: rgba(240,240,240,0.2);
+
+}
+
+#Head form input.InputBox:focus{
+   background: rgba(240,240,240,0.9);
 }
 #Head form input.Button {
+        display:none;
 	font-size: 11px;
 	border: none;
-	display:none;
 }
-
-
-#global_domain_bar {
-  background-color:#FFFFFF;
-  height:10px;
-}
-
-#global_domain_bar .tab {
-  -webkit-box-shadow:#8FB3D9 0 4px 2px -2px;
-  background-color:#FFFFFF;
-  border-radius:5px; 
-  box-shadow:#8FB3D9 0 4px 2px -2px;
-  float:right;
-  font-size:12px;
-  line-height:16px;
-  padding:6px 8px;
-  white-space:nowrap;
-  position:absolute;
-  right:10px;		 	
-}
-
-
 .Menu {
    width: 960px;
    margin: 0 auto;
    position: relative;
    text-align: left;
-   vertical-align: bottom;	
+   vertical-align: bottom;
 }
 #Menu {
    display: inline-block;
    margin-right: 280px;
    vertical-align: bottom;
-   padding-top:4px;
-	padding-left:5px;   	
 }
-
-#gnome-menu-wrapper {
-	height:70px
-}
-
-#gnome-logo {
-	float:left;
-	height:60px;
-	width:52px;
-	margin-top:10px;
-	/*background: url(images/forum-logo.png) no-repeat;*/
-
-}
-
-#gnome-menu {
-	background: url(images/top_bar-bg.png) repeat-x;
-	height:35px;
-	 border-radius: 6px 6px 6px 6px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    font-size: 13px;
-	width:900px;
-	float:right;
-	margin-top:23px;
-
-}
-
-.Search {	
-	
-}
-
-.search-input {
-	position:absolute;
-	top:29px;
-
-}
-
 #Menu li {
-   line-height: 27px;
+   line-height: 48px;
    float: left;
    position: relative;
    display: block;
@@ -588,11 +575,12 @@ body #Head h1 {
    border: 0;
    text-decoration: none;
    position: relative;
-	display: block;
+   display: block;
    padding: 0 7px;
    white-space: nowrap;
-   font-size: 11px;
+   font-size: 16px;
    height: 28px;
+   text-shadow:0px 1px 0px #000;
 }
 * html #Menu a  {
    display: inline;
@@ -600,17 +588,17 @@ body #Head h1 {
 }
 #Menu li.NonTab,
 #Menu li.NonTab a {
-   font-weight: normal;
+   font-weight: bold;
 }
 #Menu ul {
    background: #38abe3;
 }
 #Menu a {
-   color: #fff;
+   color: rgba(255,255,255,0.8);
 }
 #Menu a:hover {
-   color: #fff;
-   text-decoration: underline;
+   color: rgba(255,255,255,1.0);
+   text-decoration: none;
 }
 #Menu a span,
 #Menu li.Active a span,
@@ -642,14 +630,16 @@ body #Head h1 {
    visibility: visible;
 }
 .MenuTitle {
-   color: #000;
-   border: 1px solid #bbb;
+   color: rgba(0,0,0,0.0);
+   height:20px;
+   width:20px;
+   border: 0px;
    padding: 4px;
    -moz-border-radius: 2px;
    -webkit-border-radius: 2px;
    border-radius: 2px;
    user-select: none;
-   background: url('images/buttons.png') right -96px no-repeat;
+   background: url('http://upinthesky.net/woGue/data/emblem-system-symbolic.svg') center center no-repeat;
    padding-right: 18px;
    -webkit-user-select: none;
    -moz-user-select: none;
@@ -718,23 +708,29 @@ body #Head h1 {
    float: right;
 }
 .Box {
-   border-radius: 1px;
+   border-radius: 5px;
+   -moz-border-radius:5px;
+   -webkit-border-radius:5px;
+   border:0px;
    -moz-border-radius: 1px;
    -webkit-border-radius: 1px;
-   background: #cfecff;
+   background: #d3d7cf;
    color: #888;
-   padding: 6px 10px;
+   padding: 6px 0px;
    margin: 0 0 10px;
 	box-shadow: 0px 0px 2px #999;
 	-moz-box-shadow: 0px 0px 2px #999;
 	-webkit-box-shadow: 0px 0px 2px #999;  
+}
+.Box.BoxCategories, .Box.Tags{
+border-radius:5px;
 }
 .Box h4 {
    font-size: 110%;
    color: #1e79a7;
    font-weight: bold;
    margin: 0;
-   padding: 0 0 1px;
+   padding: 4px 0px 10px 8px;
 }
 .Box dl {
    overflow: hidden;
@@ -791,8 +787,8 @@ body #Head h1 {
 	font-size: 85%;
 }
 .PanelInfo li {
-   background: #e3f4ff;
-   border-bottom: 1px solid #abdafb;
+   background: #d3d7cf;
+   border-bottom: 1px solid #BABABA;
    padding: 2px 4px;
    text-align: right;
 }
@@ -802,7 +798,7 @@ body #Head h1 {
    font-weight: bold;
 }
 .PanelInfo {
-   border-top: 1px solid #abdafb;
+   border-top: 1px solid #888a85;
 	border-bottom: 0;
 }
 .PanelInfo li strong {
@@ -853,8 +849,8 @@ body #Head h1 {
 	padding: 2px 0;
 }
 .PanelInfo .Active {
-   background: #fff;
-   border-bottom: 1px solid #a3e6ff;
+   background: #eeeeec;
+   border-bottom: 1px solid #888a85;
 }
 .PanelInfo .Active a {
    color: #1e79a7;
@@ -884,17 +880,17 @@ a.BigButton {
    display: block;
    cursor: pointer;
    margin: 0 0 10px;
-   font-size: 15px;
+   font-size: 16px;
    font-weight: bold;
-   padding: 8px 0;
-	background: #f8f8f8;
-	background:-webkit-gradient(linear, center bottom, center top, from(#cccccc), to(#ffffff));
-	background:-moz-linear-gradient(top, #ffffff, #cccccc);
-	-pie-background:linear-gradient(top, #ffffff, #cccccc);
-	background:linear-gradient(top, #ffffff, #cccccc);
-   color: #02475A;
-	text-shadow: 0 1px 0 #fff;
-   border: 1px solid #999;
+   padding: 12px 0;
+	background: #4a90d9;
+	background:-webkit-gradient(linear, center bottom, center top, from(#4a90d9), to(#4ab0d9));
+	background:-moz-linear-gradient(top, #4ab0d9, #4a90d9);
+	-pie-background:linear-gradient(top, #4ab0d9, #4a90d9);
+	background:linear-gradient(top, #4ab0d9, #4a90d9);
+   color: rgba(0,0,0,0.6);
+   text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+   border: 1px solid #3465a4;
    border-radius: 3px;
    -moz-border-radius: 3px;
    -webkit-border-radius: 3px;
@@ -973,12 +969,18 @@ a.BigButton:focus {
    margin: 10px 0;
 }
 .DataList .Item {
-   margin: 0;
+   margin: 30px 0px 0px 26px;
    padding: 4px 0;
    border: 0;
-	position: relative;
+   position: relative;
    border-bottom: 1px solid #bec8cc;
+   min-height:48px;
 }
+
+.DataList.Discussions .Item{
+margin:0;
+}
+
 .DataList .Item .Item {
    border-bottom: none;
 }
@@ -997,7 +999,7 @@ a.BigButton:focus {
 .DataList a.Title {
    display: block;
    margin: 0;
-   font-size: 14px;
+   font-size: 16px;
    font-weight: bold;
 }
 .DataList .Title {
@@ -1048,25 +1050,16 @@ a.BigButton:focus {
 }
 .DataList a.Delete,
 .DataList a.Delete:hover {
-   border-radius: 0;
-   -moz-border-radius: 0;
-   -webkit-border-radius: 0;
-   color: #333;
+   color: rgba(0,0,0,0.0);
    display: block;
-   height:14px;
    margin:0;
+   background: url('http://upinthesky.net/woGue/data/edit-delete-symbolic.svg') center center no-repeat;
    padding:2px 4px;
-   width:auto;
-   font-family:arial;
-   font-size:16px;
-   font-weight:bold;
-	line-height: 1;
+   width:20px;
+   height:20px;
 }
 .DataList a.Delete:hover {
    text-decoration: none;
-   border: none;
-   background: #333;
-   color: #fff;
 }
 /* Condensed datalists make the main link & excerpt inline. */
 .DataList .Unfollow {
@@ -1208,6 +1201,18 @@ body.Profile ul.Activities {
 /* used for lists of message-based content (discussion comments, private
 conversation messages, etc). */
 
+div.SubTab.Breadcrumbs{
+padding:4px;
+}
+
+.Breadcrumb a, .ActivityTabs a{
+color: rgba(255,255,255,0.8);
+font-weight:bold;
+}
+
+.Breadcrumb a:hover, .ActivityTabs a:hover{
+color: rgba(255,255,255,1.0);
+}
 .MessageList,
 .MessageList li {
    list-style: none;
@@ -1215,8 +1220,12 @@ conversation messages, etc). */
    padding: 0;
 }
 .MessageList .Item {
-   border-bottom: 1px solid #BEC8CC;
-	padding: 10px 10px 4px 10px;
+   border-bottom: 0px;
+   border:2px solid rgba(0,0,0,0.05);
+   border-radius:5px;
+   padding: 10px 10px 4px 10px;
+   margin: 24px 0px;
+   background: rgba(200,200,200,0.1);
 }
 .MessageList .Meta {
    font-size: 11px;
@@ -1224,23 +1233,36 @@ conversation messages, etc). */
 	min-height: 40px;
 }
 .Item .Author img {
-   height: 40px;
-   width: 40px;
-   border: 0;
+   position:absolute;
+   left: -24px;
+   top:-12px;
+   height: 48px;
+   width: 48px;
    margin: 0 10px 0 0;
    float: left;
    overflow: hidden;
    background: #eee;
+   border: 0px;
+   border-radius: 5px;
+   box-shadow: 6px 6px 40px rgba(0, 0, 0, 0.7);
 }
+
+#Panel .Photo{
+
+    border: 2px solid #8b8b8b;
+    border-radius: 8px;
+}
+
 .MessageList .Meta span {
    line-height: 2.5;
    padding-left: 10px;
 }
 .MessageList .Meta .Author {
-	padding: 0;
+   padding: 0;
+   margin-left:28px;
 }
 .MessageList .Meta .Author a {
-   font-size: 15px;
+   font-size: 24px;
    font-weight: bold;
 }
 .MessageList .Meta span {
@@ -1572,11 +1594,14 @@ table.PreferenceGroup td.Description {
 .Tabs,
 .Headings {
 	display: block;
-   border-bottom: 1px solid #abdafb;
+   border: 2px solid #ccc;
+   border-radius:7px;
+   box-shadow: inset 0px -10px 20px rgba(255,255,255,0.1);
    padding: 5px 8px;
    margin: 0;
-   background: #cfecff;
+   background: #000;
    position: relative;
+   color:rgba(255,255,255,0.9);
 }
 .MessageForm .Tabs {
 	padding: 0;
@@ -1597,37 +1622,38 @@ table.PreferenceGroup td.Description {
 .TabLink:active,
 .TabLink:visited {
    margin: 0;
-   border: 1px solid #abdafb;
+   border: 2px solid #aaa;
    border-radius: 3px;
    -moz-border-radius: 3px;
    -webkit-border-radius: 3px;
-   background: #bbe2f7;
+   background: #8FB9CF;
    display: inline;
    font-weight: bold;
-   color: #1e79a7;
+   color: #fff;
+   text-shadow: 0px 1px 0px #4d4d4d;
    text-decoration: none;
    padding: 5px 10px;
 	line-height: 2.6;
 	white-space: nowrap;
 }
 .TabLink:hover {
-   background: #f3fcff;
+   background: #8FB9CF;
 }
 .Active .TabLink {
-   background: #fff;
-   color: #474747;
+   background: #8FB9CF;
+   color: #fff;
 }
 .Count {
    background: #444;
    background-color: rgba(0, 0, 0, .6);
    border-radius: 3px;
-   -webkit-border-radius: 3px;
-   -moz-border-radius: 3px;
-   border-radius: 3px;
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
    color: #fff;
    font-size: 80%;
    font-weight: normal;
-   padding: 1px .8ex;
+   padding: 4px 8px;
 }
 .Tabs li a span {
    line-height: 1;
@@ -1642,9 +1668,9 @@ table.PreferenceGroup td.Description {
    margin: 0 0 0 4px;
 }
 .Tabs .SubTab {
-	margin: 10px 0 0;
+	margin: 0 0;
 	padding: 4px 8px;
-	background: #f3fcff;
+	background:000;
    border-radius: 2px;
    -webkit-border-radius: 2px;
    -moz-border-radius: 2px;
@@ -1689,17 +1715,25 @@ table.PreferenceGroup td.Description {
 .MessageList .Item,
 body.Discussion #Content,
 .DiscussionsTabs {
-	position: relative;
+   position: relative;
+}
+.DiscussionsTabs{
+   display:inline-block;
+   width:100%;
+}
+
+.DiscussionsTabs ul{
+float:right;
 }
 .Tabs .AdminCheck {
-   position: absolute;
-   right: 26px;
-   bottom: 5px;
+ position:inline;
+ float:left;
 }
 .AdminCheck {
    display: inline-block;
    height: 22px;
-   vertical-align: top;
+   vertical-align: center;
+
 }
 
 /* ======================================================== Thumbnail Cropper */
@@ -1932,23 +1966,11 @@ div.Popup form ul li label.RadioLabel {
    clear: both;
    text-align: center;
    margin: 2px 0;
-   /*padding: 4px 9px;*/
+   padding: 4px 9px;
    font-size: 13px;
    color: #ddd;
    line-height: 1;
-   background: url(images/grass.png) repeat-x;
-   height:50px;
-   
-  		
 }
-#foot-text  {
-	background-color:#D0D7CC;
-	height:50px;
-	top:35px;
-	position:relative;
-}
-
-
 #Foot a {
    color: #ccc;
 }
@@ -1956,11 +1978,10 @@ div.Popup form ul li label.RadioLabel {
    color: #aaa;
 }
 #Foot div {
-	/*width: 960px;*/
+	width: 960px;
 	padding: 6px 0;
 	margin: 20px auto 0;
 	text-align: left;
-	
 }
 
 
@@ -1989,7 +2010,7 @@ div.Popup form ul li label.RadioLabel {
   + Mine: the user created the discussion
   + New: there are new comments since the last viewed the discussion
 */
-.Mine { background: #e3f4ff; }
+.Mine { background: rgba(74,144,217,0.1); }
 
 .DataList .Meta a.Category {
    background: #fafafa;
@@ -2096,10 +2117,23 @@ body.Discussion .Back {
 	padding: 6px 0px;
 	border: 0;
 }
+.CommentTabs{
+margin:8px 0px;
+}
+.CommentTabs li{
+margin-right:4px;
+}
+
+.DateCreated{
+   float:right;
+   padding:4px;
+}
+
 #DiscussionForm label {
    font-size: 14px;
    font-weight: bold;
-   color: #666;
+   color: #fff;
+   text-shadow: 0px 1px 0px #000;
 }
 body.Post #Panel {
    display: none;
@@ -2117,9 +2151,9 @@ body.Post #Content {
 }
 #DiscussionForm form {
    border-radius: 2px;
-   -moz-border-radius: 2px;
-   -webkit-border-radius: 2px;
-   background: #CFECFF none repeat scroll 0 0;
+   -moz-border-radius: 17px;
+   -webkit-border-radius: 17px;
+   background: #000 none repeat scroll 0 0;
    border: 1px solid #7caccb;
    margin: 0;
    padding: 20px;
@@ -2143,6 +2177,7 @@ body.Post #Content {
 }
 .CommentForm .Buttons {
    text-align: right;
+   margin:24px;
 }
 .CommentForm a.Back,
 .CommentForm a.Cancel {
@@ -3167,6 +3202,9 @@ body.embed .Connect h2 {
    font-size: 10px;
    text-transform: uppercase;
 }
+
+
+
 .ProfilePhotoSmall {
    height: 24px;
    width: 24px;
