@@ -11,11 +11,11 @@ Contact Vanilla Forums Inc. at support [at] vanillaforums [dot] com
 /**
  * An associative array of information about this application.
  */
-$ThemeInfo['wogforums'] = array(
-   'Name' => 'wogforums',
-   'Description' => "Mimic Gnome Themes",
+$ThemeInfo['Shell'] = array(
+   'Name' => 'Shell',
+   'Description' => "A Theme mimicing Gnome Shell.",
    'Version' => "0.1",
-   'Author' => "alex diavatis",
-   'AuthorEmail' => 'alexis.diavatis@gmail.com',
-   'AuthorUrl' => 'http://forums.worldofgnome.org'
+   'Author' => "Joern Konopka",
+   'AuthorEmail' => 'cldx3000@googlemail.com',
+   'AuthorUrl' => 'http://upinthesky.net'
 );
