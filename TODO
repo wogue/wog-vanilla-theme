@@ -11,3 +11,7 @@ will degrade the User Pic from living in an img-tag to a background image of the
 	1. Keep the nice borders intact
 	2. Make the image scale properly to the size of the box without constantly breaking the element layout of the Profile 
 
+
+-Remove unneccessary Code from the custom.css
+	Since we're getting closer to having all the Elements styled properly we can start removing all the css code that just duplicates code in the style.css, i bet we can save like 50K cause right now it will just pass 80% the exact same css code twice.
+

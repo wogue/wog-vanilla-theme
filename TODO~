@@ -1,8 +1,13 @@
 TODO
 
--Replace _ALL THE ICONS_ with Gnome Symbolic Icons
+-Replace _ALL THE ICONS_ with Gnome Symbolic Icons [In PROGRESS]
 -Browser Testing...Browser Testing....and some more Browser Testing
--Find Areas of the Board that look broken with the new Theme
--Remove the Gnome Look Header
+-Find Areas of the Board that look broken with the new Theme [looking good so far]
+-Remove the Gnome Look Header [DONE]
 -Remove the Gnome Look Footer(?)...we could do something akin to it, just not use the original Grass Image maybe?
+
+-Fix the horrible, horrible User Image Treatment of Vanilla Boards, we probably will have to push a different template for the Profile that
+will degrade the User Pic from living in an img-tag to a background image of the wrapping div to make sure we can:
+	1. Keep the nice borders intact
+	2. Make the image scale properly to the size of the box without constantly breaking the element layout of the Profile 
 
