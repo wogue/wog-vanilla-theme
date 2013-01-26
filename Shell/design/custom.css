@@ -179,6 +179,8 @@ input.SmallInput:focus,
 input.InputBox:focus,
 textarea:focus {
    background: #ffe;
+     border: 2px solid rgba(74,144,214,0.9);
+   box-shadow:0px 0px 24px rgba(74,144,214,0.9);
 }
 input.BigInput {
    width: 100%;
@@ -198,7 +200,7 @@ select {
 a.Button,
 .Button {
    cursor: pointer;
-   margin: 0;
+   margin: 0px 4px;
    font-size: 10px;
    padding: 6px 10px;
    background: #f8f8f8;
@@ -221,10 +223,12 @@ a.Button,
 
 }
 a.Button {
-   display: inline-block;
-   padding: 6px 10px;
-   line-height: 100%;
-   margin: 3px auto;
+    display: inline-block;
+    padding: 10px 29px;
+    line-height: 100%;
+    margin: 3px auto;
+    font-weight: bold;
+    font-size: 13px;
    -webkit-transition: all 0.4s ease-in-out;
    -moz-transition: all 0.4s ease-in-out;
    -o-transition: all 0.4s ease-in-out;
@@ -455,7 +459,7 @@ a.Small img {
 
 /* =================================================================== Header */
 #Head {
-   background: #000 url('images/noise-texture.png');
+   background:black url('images/noise-texture.png');
    padding: 0;
    height:48px;
 }
@@ -481,8 +485,8 @@ body #Head h1 {
 #Head .Search,
 #Head #Search {
    position: absolute;
-   right: 0;
-   top: 4px;
+   right: 10px;
+   top: 0px;
    text-align: right;
    margin:8px;
 
@@ -527,11 +531,14 @@ body #Head h1 {
 	border: none;
 }
 .Menu {
-   width: 960px;
-   margin: 0 auto;
-   position: relative;
-   text-align: left;
-   vertical-align: bottom;
+	width: 900px;
+	margin: 0 auto;
+	position: relative;
+	text-align: left;
+	vertical-align: bottom;
+	background: url('images/header-bg.png') no-repeat 0px center;
+	height: 48px;
+	padding: 0px 40px;
 }
 #Menu {
    display: inline-block;
@@ -602,6 +609,8 @@ body #Head h1 {
    font-size: 10px;
    font-weight: normal;
    line-height: 100%;
+   height:16px;
+   width:16px;
 }
 .Item .OptionsMenu {
    vertical-align: top;
@@ -612,52 +621,40 @@ body #Head h1 {
 }
 .MenuTitle {
    color: rgba(0,0,0,0.0);
-   height:20px;
-   width:20px;
+   height:22px;
+   width:22px;
    border: 0px;
-   padding: 4px;
-   -moz-border-radius: 2px;
-   -webkit-border-radius: 2px;
-   border-radius: 2px;
+   padding: 0px;
    user-select: none;
    background: url('images/emblem-system-symbolic.png') center center no-repeat;
-   padding-right: 18px;
    -webkit-user-select: none;
    -moz-user-select: none;
    -o-user-select: none;
 }
 .Open .MenuTitle {
-   border: 1px solid #282828;
-   -moz-border-radius-bottomleft: 0;
-   -moz-border-radius-bottomright: 0;
-   -webkit-border-bottom-left-radius: 0;
-   -webkit-border-bottom-right-radius: 0;
-   box-shadow:2px 2px 3px rgba(0,0,0,0.5);
-   -moz-box-shadow:2px 2px 3px rgba(0,0,0,0.5);
-   -webkit-box-shadow:2px 2px 3px rgba(0,0,0,0.5);
-   border-bottom-left-radius: 0;
-   border-bottom-right-radius: 0;
-   color: #fff;
-   background: url('images/buttons.png') right -144px no-repeat #282828;
+   border: 0px solid #282828;
+   box-shadow:0px 0px 0px rgba(0,0,0,0.0);
+   -moz-box-shadow:0px 0px 0px rgba(0,0,0,0.0);
+   -webkit-box-shadow:0px 0px 0px rgba(0,0,0,0.0);
+   color: rgba(0,0,0,0.0);
+   background: url('images/emblem-system-active-symbolic.png') center center no-repeat;
 }
 .MenuItems {
-   border: 1px solid #282828;
-   -moz-border-radius-bottomleft:2px;
-   -moz-border-radius-bottomright:2px;
-   -webkit-border-radius-bottom-left:2px;
-   -webkit-border-radius-bottom-right:2px;
-   box-shadow:2px 2px 3px rgba(0,0,0,0.5);
-   -moz-box-shadow:2px 2px 3px rgba(0,0,0,0.5);
-   -webkit-box-shadow:2px 2px 3px rgba(0,0,0,0.5);
-   background:none repeat scroll 0 0 #444444;
-   border:1px solid #282828;
+   box-shadow:0px 0px 0px rgba(0,0,0,0.0);
+   -moz-box-shadow:0px 0px 0px rgba(0,0,0,0.0);
+   -webkit-box-shadow:0px 0px 0px rgba(0,0,0,0.0);
+   background:none repeat scroll 0 0 #000;
+   border:2px solid #C8C8C8;
+   border-radius:12px;
    min-width: 125px;
    line-height: 100%;
    font-size: 10px;
 	color: #fff;
 }
 .MenuItems li {
-   padding: 6px !Important;
+   padding: 10px !Important;
+   font-size: 130%;
+	font-weight: bold;
 }
 .MenuItems a, .MenuItems a:link, .MenuItems a:visited, .MenuItems a:active {
    color: #fff;
@@ -665,7 +662,7 @@ body #Head h1 {
 	text-decoration: none;
 }
 .MenuItems li:hover {
-   background: #282828;
+   background: #7F7F7F;
 }
 .ToggleFlyout {
    cursor: pointer;
@@ -676,10 +673,11 @@ body #Head h1 {
 }
 .ToggleFlyout .Flyout {
    position: absolute;
-   top: 100%;
+   top: 140%;
    left: 0;
    display: none;
    z-index: 100;
+   padding:8px 0px;
 }
 
 
@@ -703,6 +701,16 @@ body #Head h1 {
 	-moz-box-shadow: 0px 0px 2px #999;
 	-webkit-box-shadow: 0px 0px 2px #999;  
 }
+
+.Box.GuestBox{
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: center;
+}
+.Box.GuestBox h4{
+font-size:170%;
+}
+
 .Box.BoxCategories, .Box.Tags{
 border-radius:5px;
 }
@@ -1229,9 +1237,16 @@ color: rgba(255,255,255,1.0);
 }
 
 #Panel .Photo{
-
-    border: 2px solid #8b8b8b;
-    border-radius: 8px;
+	border-radius: 32px;
+	height:250px;
+	width:250px;
+	max-height: 250px;
+	max-width: 250px;
+	overflow: hidden;
+}
+#Panel .Photo img{
+	height:100%;
+	width:100%;
 }
 
 .MessageList .Meta span {
@@ -1577,12 +1592,12 @@ table.PreferenceGroup td.Description {
 	display: block;
    border: 2px solid #ccc;
    border-radius:7px;
-   box-shadow: inset 0px -10px 20px rgba(255,255,255,0.1);
    padding: 5px 8px;
    margin: 0;
    background: #000;
    position: relative;
    color:rgba(255,255,255,0.9);
+   box-shadow: 0px 2px 23px rgba(0, 0, 0, 0.6);
 }
 .MessageForm .Tabs {
 	padding: 0;
@@ -1595,58 +1610,66 @@ table.PreferenceGroup td.Description {
 }
 .Tabs li {
    display: inline;
-   margin: 0;
+   margin-right: 14px;
 }
 .TabLink,
 .TabLink:link,
 .TabLink:hover,
 .TabLink:active,
 .TabLink:visited {
+	position:relative;
    margin: 0;
-   border: 2px solid #aaa;
-   border-radius: 3px;
-   -moz-border-radius: 3px;
-   -webkit-border-radius: 3px;
-   background: #8FB9CF;
+   border: 1px solid #3465a4;
+   border-radius: 4px;
+   -moz-border-radius: 4px;
+   -webkit-border-radius: 4px;
+   background: #4a90d9;
    display: inline;
    font-weight: bold;
    color: #fff;
-   text-shadow: 0px 1px 0px #4d4d4d;
    text-decoration: none;
    padding: 5px 10px;
 	line-height: 2.6;
 	white-space: nowrap;
 }
 .TabLink:hover {
-   background: #8FB9CF;
+   background: #4a90d9;
+      color: #fff;
 }
 .Active .TabLink {
-   background: #8FB9CF;
+   background: #4a90d9;
    color: #fff;
 }
 .Count {
-   background: #444;
-   background-color: rgba(0, 0, 0, .6);
-   border-radius: 3px;
-   -webkit-border-radius: 20px;
-   -moz-border-radius: 20px;
-   border-radius: 20px;
-   color: #fff;
-   font-size: 80%;
-   font-weight: normal;
+   background:rgba(0,0,0,0.0);
+   color: #444;
+   font-size: 100%;
+   font-weight: bold;
    padding: 4px 8px;
 }
 .Tabs li a span {
-   line-height: 1;
-   font-size: 80%;
-   padding: 0 3px;
-   border-radius: 3px;
-   -webkit-border-radius: 3px;
-   -moz-border-radius: 3px;
-   font-weight: normal;
-   background: #1e79a7;
-   color: #eaf4fd;
-   margin: 0 0 0 4px;
+   position: absolute;
+right: -15px;
+top: -16px;
+line-height: 1;
+font-size: 100%;
+text-align: center;
+padding: 5px;
+border-radius: 3px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+font-weight: bold;
+background: #1E79A7;
+border: 2px solid #D8D8D8;
+color: #EAF4FD;
+margin: 0px;
+height: 14px;
+width: auto;
+min-width: 14px;
+border-radius: 21px;
+z-index: 100;
+text-shadow: 0px 1px 0px #222;
+box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6), inset 2px 2px 6px rgba(255, 255, 255, 0.4);
 }
 .Tabs .SubTab {
 	margin: 0 0;
@@ -1806,11 +1829,11 @@ div.Popup .Border {
   margin: 0px auto;
   text-align: left;
   position: relative;
-  max-width: 500px;
+  max-width: 800px;
   display: inline-block;
 }
 div.Popup .Body {
-  background: #fff;
+  background: transparent;
 }
 div.Popup .Legal,
 div.Popup .Content form {
@@ -1827,24 +1850,23 @@ div.Popup h2 {
 	font-weight:bold;
 	margin-bottom: 0;
 	color: #fff;
-	background: #38abe3;
-	border-bottom: 1px solid #3DB9E5;
+	background: transparent;
+	border-bottom: 0px;
 	padding: 6px 9px 4px;
 }
 a.Close {
 	position: absolute;
 	top: 16px;
 	right: 20px;
-	line-height: 1;
-	color: #E4F7FE;
+	height:16px;
+	width:16px;
+	color:rgba(0,0,0,0.0);
 	cursor: pointer;
-	font-family: arial;
-	font-size: 22px;
-	font-weight: bold;
+	background:url('images/edit-delete-symbolic.png');
 	padding: 0;
 }
 a.Close:hover {
-	color: #fff;
+	color: rgba(0,0,0,0.0);
 }
 div.Popup .Footer {
 	border: none;
@@ -1883,6 +1905,11 @@ div.Popup form ul li label {
 	font-weight:bold;
 	margin: 10px 0 0;
 }
+
+div.Popup form ul li label{
+color:#fff;
+}
+
 body.Entry form ul li.Gender label.RadioLabel,
 body.Profile #Form_User ul li.Gender label.RadioLabel,
 div.Popup form ul li.Gender label.RadioLabel {
@@ -2050,23 +2077,29 @@ a.Bookmark,
 a.Bookmarked,
 a.Bookmarking {
    display: inline-block;
-   background: url('images/star_sprite.png') top center no-repeat;
+   background: url('images/bookmark-add-symbolic.png') center center no-repeat;
    height: 22px;
    width: 22px;
 }
+
+a.Bookmarked{
+   background: url('images/bookmark-active-symbolic.png') center center no-repeat;
+}
+a.Bookmarked:hover{
+   background: url('images/bookmark-remove-symbolic.png') center center no-repeat;
+}
+
 a.Bookmark span,
 a.Bookmarking span {
    display: none;
 }
-a.Bookmarked {
-   background-position: center center;
-}
+
 a.Bookmarking {
-   background-position: bottom center;
+   background-position: center center;
 }
 body.Discussion a.Bookmark {
    float: right;
-	margin: 5px 0 0 8px;
+	margin: 6px 6px 8px 12px;
 }
 body.Discussion .Back {
    padding: 3px 6px;
@@ -2377,11 +2410,13 @@ body.Conversations a.Cancel {
 
 /* Container */
 .Border {
-	border-radius: 8px;
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
-	background: none repeat scroll 0 0 rgba(82, 82, 82, 0.7);
-	padding: 10px;
+border-radius: 32px;
+-moz-border-radius: 32px;
+-webkit-border-radius: 32px;
+background: none repeat scroll 0 0 rgba(55, 55, 55, 0.9);
+padding: 10px;
+border: 2px solid rgba(200, 200, 200, 0.8);
+box-shadow: 0px 0px 1000px rgba(0, 0, 0, 1.0);
 }
 
 /* Tabs */
@@ -2672,6 +2707,7 @@ body#dashboard_entry_index form ul li label {
 	font-size: 13px;
 	line-height: 1.5;
 	padding: 0;
+	color:#fff;
 }
 .Connect form ul li#ConnectPassword label,
 .SignInPopup form ul li#ConnectPassword label {
@@ -2719,26 +2755,26 @@ body#dashboard_entry_index input.InputBox,
 }
 .Errors ul {
 	border: 1px solid #a00 !important;
-   background: #d50a0a !important;
+   background: #ef2929 !important;
 	padding: 6px 10px;
 	display: block;
-   border-radius: 2px;
-	-moz-border-radius: 2px;
-	-webkit-border-radius: 2px;
+   border-radius: 12px;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
 	box-shadow: none;
 	-moz-box-shadow: none;
 	-webkit-box-shadow: none;
 }
 .Errors ul li {
    color: #fff !important;
-   background: #d50a0a !important;
+   background: #ef2929 !important;
 	text-align: left;
 }
 div.Popup .Errors ul {
 	display: block;
-   border-radius: 2px;
-	-moz-border-radius: 2px;
-	-webkit-border-radius: 2px;
+   border-radius: 12px;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
 	box-shadow: none;
 	-moz-box-shadow: none;
 	-webkit-box-shadow: none;
